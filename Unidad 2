@@ -1,0 +1,23 @@
+
+public class Unidad2 {
+
+	public static void main(String[] args) {
+		
+		//Caso practico 1.Palabras Reservadas
+		
+				final int IVA_GENERAL=21;
+				
+				final int IVA_REDUCIDO=10;
+				
+				final int IVA_SUPERREDUCIDO=4;
+				
+				final int IVA_IGIC_ESPECIAL=20;
+				
+				final int IVA_IGIC_INCREMENTADO=15;
+				
+				final int IVA_IGIC_GENERAL=7;
+				
+
+	}
+
+}
