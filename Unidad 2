@@ -17,6 +17,55 @@ public class Unidad2 {
 				
 				final int IVA_IGIC_GENERAL=7;
 				
+		//Caso practico 2: Tipos de datos básicos
+				
+				public enum Meses {
+					ENERO(31),
+					FEBRERO(28),
+					MARZO(31),
+					ABRIL(30),
+					MAYO(31),
+					JUNIO(30),
+					JULIO(31),
+					AGOSTO(31),
+					SEPTIEMBRE(30),
+					OCTUBRE(31),
+					NOVIEMBRE(30),
+					DICIEMBRE(31);
+					
+				private int dias;	//Esto crea una variable llamada "dias" para almacenar el numero de dias
+				
+				Meses(int dias){	//recibe el numero de dias
+					this.dias=dias;	//guarda el numero recibido en el atributo
+				}
+				}
+				
+		//Caso practico 3: Expresiones lógicas
+				
+				boolean op1=4>=5||true&&false;	
+						
+				boolean op2=4>=5&&false||true;	
+				
+		System.out.println(op1);	//da false
+		System.out.println(op2);	//da true 
+		
+		//Caso practico 4: Generar datos aleatorios
+		
+		byte NumeroMuyPequeño=(byte)(Math.random()*128);
+		short NumeroPequeño=(short)(Math.random()*32.767);
+		int NumeroEntero=(int)(Math.random()*2147000);
+		long NumeroLargo=(long)(Math.random()*12039182);
+		
+		System.out.println(NumeroMuyPequeño);
+		System.out.println(NumeroPequeño);
+		System.out.println(NumeroEntero);
+		System.out.println(NumeroLargo);
+		
+		//Caso practico 5: Nuestra primera documentación
+		
+		/*
+		 * Todo este documento, ya es el caso practico 5 porque esta documentado cada caso practico
+		 */
 
 	}
 
