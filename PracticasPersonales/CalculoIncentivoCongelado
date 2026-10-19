@@ -1,0 +1,19 @@
+import javax.swing.*;
+
+import static java.lang.Integer.parseInt;
+
+public class CalculoIncentivos {
+    public static void main(String[] args) {
+
+        String nombre_operario= JOptionPane.showInputDialog("Introduzca su nombre de operario");
+
+        System.out.println("Bienvenido " + nombre_operario);
+        System.out.println("Este programa te va a calcular cuanto dinero valen tus entradas de congelado");
+
+        int entradasCong= Integer.parseInt(JOptionPane.showInputDialog("Introduce tus entradas de congelado"));  //recoge el numero de entradas de congelado
+
+        double entradasCong2=(double)entradasCong;   //hace la conversion a decimales para que poder hacer el calculo con exactitud
+
+        System.out.println(entradasCong + " entradas tienen el valor de " + (entradasCong2*15.93) + " €");
+    }
+}
