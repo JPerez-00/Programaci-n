@@ -1,0 +1,28 @@
+public class InvitacionBoda {
+    public static void main(String[] args) {
+
+        Scanner entrada=new Scanner(System.in);
+
+        System.out.println("Enhorabuena! Has sido inivitad@ a la boda, " +
+                "para saber de quien es, tienes que introducir sus nombres");
+
+        System.out.println("Introduce el nombre del novio:");
+
+        String nombre_novio= entrada.nextLine();
+
+        System.out.println("Acertastes! el novio es  " + nombre_novio);
+
+        System.out.println("Introduce el nombre de la novia: ");
+
+        String nombre_novia= entrada.nextLine();
+
+        System.out.println("Acertastes! la novia es " + nombre_novia);
+
+        System.out.println("Ahora di el numero de personas que van a ir de tu familia: ");
+
+        int numero_comensales= entrada.nextInt();
+
+        System.out.println("Genial! todo listo para vernos alli");
+
+    }
+}
