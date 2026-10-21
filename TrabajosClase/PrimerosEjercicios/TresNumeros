@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class TresNumerosValor {
+
+    static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num1, num2, num3;
+        int numMayor, numMediano, numMenor;
+
+        System.out.println("Dame 3 numeros y te dare el orden de mayor a menor: ");
+        System.out.print("NUMERO 1:");
+        num1 = sc.nextInt();
+
+        System.out.print("NUMERO 2: ");
+        num2 = sc.nextInt();
+
+        System.out.print("NUMERO 3: ");
+        num3 = sc.nextInt();
+
+        numMayor = 0;   numMediano = 0;     numMenor = 0;
+
+        //Orden de las secuencias
+        if (num2 > num1 && num2 > num3 && num1 > num3) {
+            numMayor = num2; numMediano = num1; numMenor = num3;
+        }
+        if (num3 > num1 && num3 > num2 && num2 > num1 ) {
+            numMayor = num3; numMediano = num2; numMenor = num1;
+        }
+        if (num1 > num2 && num1 > num3 && num3> num2) {
+            numMayor = num1; numMediano = num3; numMenor = num2;
+        }
+        if (num1 > num2 && num1 > num3 && num2 > num3) {
+            numMayor = num1; numMediano = num2; numMenor = num3;
+        }
+        if (num2 > num3 && num2 > num1 && num3 > num1) {
+            numMayor = num2; numMediano = num3; numMenor = num1;
+        }
+        if (num3 > num1 && num3 > num2 && num1 > num2) {
+            numMayor = num3; numMediano= num1; numMenor = num2;
+        }
+
+
+        System.out.println("El orden es: ");
+
+        System.out.println("NUMERO MAYOR: " + numMayor);
+
+        System.out.println("NUMERO MEDIANO: " + numMediano);
+
+        System.out.println("NUMERO MENOR: " + numMenor);
+
+        System.out.println("");
+
+        System.out.println(numMayor + " > " + numMediano + " > " + numMenor);
+
+        }
+    }
