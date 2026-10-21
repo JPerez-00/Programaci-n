@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class DosNumerosValor {
+    static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num1, num2;
+
+        System.out.println("Dame dos numeros y te dire cual es mayor, menor y si es igual");
+
+        System.out.print("NUMERO 1: ");
+        num1 = sc.nextInt();
+
+        System.out.print("NUMERO 2: ");
+        num2 = sc.nextInt();
+
+        if (num1>num2) {
+            System.out.println("El mayor es: " + num1 + " y el numero menor es: " + num2);
+
+        }
+        else if (num1<num2){
+            System.out.println("El mayor es: " + num2 + " y el numero menor es: " + num2);
+        }
+        else {
+            System.out.println("Los dos son iguales: " + num1 + " = " + num2);
+        }
+    }
+}
