@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class NotasAlumno {
+    static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+
+        String alumno;
+        double nota1, nota2, nota3, notafinal;
+
+
+        System.out.println("Escriba su nombre: ");
+        alumno=sc.nextLine();
+
+        System.out.println("Bienvenid@ "+alumno);
+
+        System.out.println("Para sacar la media de tus ultimas 3 notas, por favor introducelas a continuación");
+
+        System.out.println("Nota 1: ");
+        nota1= sc.nextDouble();
+
+        System.out.println("Nota 2: ");
+        nota2= sc.nextDouble();
+
+        System.out.println("Nota 3: ");
+        nota3 = sc.nextDouble();
+
+        System.out.println("Con tus tres notas recogidas, tu nota final es: "+((nota1+nota2+nota3)/3));
+        notafinal=((nota1+nota2+nota3)/3);
+
+        if (notafinal>=5) {
+            System.out.println("Enhorabuena! Aprobastes la asignatura "+alumno);
+        }
+        else {
+            System.out.println("Una pena, te toca repetir "+alumno);
+        }
+
+    }
+
+}
