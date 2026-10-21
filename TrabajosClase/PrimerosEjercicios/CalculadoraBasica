@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class CalculadoraBasica {
+
+    static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+
+        int suma1, suma2, resta1, resta2, multip1, multip2, dividendo, divisor, resto1, resto2;
+
+
+        System.out.println("Esto es una calculadora, en la que se puede sumar, restar, multiplicar, dividir y resto");
+
+        System.out.println("SUMA, dame dos valores");
+        suma1 = sc.nextInt();
+        suma2 = sc.nextInt();
+        System.out.println("El resultado es " + (suma1 + suma2));
+
+        System.out.println("RESTA, dame dos valores");   //Debo comprobar que reste el número mayor menos el menor
+        resta1 = sc.nextInt();
+        resta2 = sc.nextInt();
+
+        if (resta1>resta2) {
+            System.out.println("El resultado es: " + (resta1-resta2));
+        }
+        else {
+            System.out.println("El resultado es: " + (resta2-resta1));
+        }
+
+        System.out.println("MULTIPLICACION, dame dos valores");
+        multip1 = sc.nextInt();
+        multip2 = sc.nextInt();
+        System.out.println("El resultado es: " + (multip1 * multip2));
+
+        System.out.println("DIVISIÓN, dame dos valores");
+        dividendo = sc.nextInt();
+        divisor = sc.nextInt();
+        if (divisor == 0) {
+            System.out.println("No te puedo dar el resultado porque el divisor es 0 ");
+        } else {
+            System.out.println("El resultado es: " + (dividendo / divisor));
+
+        }
+
+        System.out.println("RESTO, dame dos valores");
+        resto1 = sc.nextInt();
+        resto2 = sc.nextInt();
+
+        System.out.println("El resto es: " + (resto1 % resto2));
+    }
+}
