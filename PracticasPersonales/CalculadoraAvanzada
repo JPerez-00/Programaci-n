@@ -1,0 +1,88 @@
+import java.util.Scanner;
+
+public class CalculadoraAvanzada {
+    static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("BIENVENIDO A MI CALCULADORA AVANZADA");
+
+        System.out.println("Introduzca los siguientes posibles numeros para realizar una operacion:");
+        System.out.println("NUMERO 1: SUMA");
+        System.out.println("NUMERO 2: RESTA");
+        System.out.println("NUMERO 3: MULTIPLICA");
+        System.out.println("NUMERO 4: DIVIDE");
+        System.out.println("NUMERO 5: RESTO");
+
+        System.out.print("Respuesta: ");
+        int numero = sc.nextInt();
+
+        int resultado = switch (numero) {
+            case 1 -> {
+                System.out.println("Introduce los dos numeros a sumar:");
+
+                System.out.println("NUMERO 1: ");
+                int suma1 = sc.nextInt();
+
+                System.out.println("NUMERO 2: ");
+                int suma2 = sc.nextInt();
+
+                int SolSuma = suma1+suma2;
+                yield SolSuma;
+            }
+
+
+            case 2 -> {
+                System.out.println("Introduce los dos numeros a restar: ");
+
+                System.out.println("NUMERO 1: ");
+                int resta1 = sc.nextInt();
+
+                System.out.println("NUMERO 2: ");
+                int resta2 = sc.nextInt();
+
+                int SolResta = (resta1>resta2)? resta1-resta2 : resta2-resta1;
+
+                yield SolResta;
+            }
+
+            case 3 -> {
+                System.out.println("Introduce los dos numeros a multiplicar");
+
+                System.out.println("NUMERO 1: ");
+                int mult1 = sc.nextInt();
+
+                System.out.println("NUMERO 2: ");
+                int mult2 = sc.nextInt();
+
+                yield mult1*mult2;
+            }
+
+            case 4 -> {
+                System.out.println("Introduce los dos numeros a dividir");
+
+                System.out.print("NUMERO 1: ");
+                int div1 = sc.nextInt();
+
+                System.out.println("NUMERO 2: ");
+                int div2 = sc.nextInt();
+                
+                yield div1/div2;
+            }
+
+            case 5 -> {
+                System.out.println("Introduces los dos numeros para el resto");
+
+                System.out.println("NUMERO 1: ");
+                int resto1= sc.nextInt();
+
+                System.out.println("NOMERO 2: ");
+                int resto2= sc.nextInt();
+
+                yield resto1%resto2;
+            }
+            default -> 0;
+        };
+        System.out.println("El resultado es: " + resultado);
+    }
+}
